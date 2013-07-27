@@ -17,9 +17,12 @@ then
   mv config_local.yml app/config/
   cp -r theme/base-2013 theme/site-theme
   echo "cleaning up.."
-  git rm -f config_local.yml
-  git rm -f README.md
   git add .
+  git rm -f config_local.yml
+  git rm --cached setup.sh
+  git rm --cached README.md
+  git commit -am "Baseline Commit for new Bolt Site"
+  git remote remove origin
   echo "done.."
 else
   echo "need to download http://bolt.cm/distribution/bolt_latest.tgz"

@@ -1,8 +1,7 @@
 *
 !*/
-!setup.sh
 !app/config/*.yml
 !app/extensions/**/*.yml
-!theme/site-theme/*
+!theme/site-theme/**
 
 app/config/config_local.yml
