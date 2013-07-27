@@ -15,8 +15,10 @@ then
   cp app/config/taxonomy.yml.dist app/config/taxonomy.yml
   cp app/config/menu.yml.dist app/config/menu.yml
   mv config_local.yml app/config/
-  echo "cleaning up.."
   cp -r theme/base-2013 theme/site-theme
+  echo "cleaning up.."
+  git rm -f config_local.yml
+  git rm -f README.md
   git add .
   echo "done.."
 else
